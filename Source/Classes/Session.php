@@ -47,13 +47,12 @@ class Session
 		session_destroy();
 	}
 
-	public static function verify($configuration)
+	public static function verify()
 	{
 		$isSessionVerified = false;
 		$messageToShow = null;
 
-		$appDirectory = $configuration->appDirectory;
-		$loginPageAddress = "/" . $appDirectory;
+		$loginPageAddress = "/Store/OnlineStore/index.html";
 
 		$messageSessionExpired =
 			"Your session has expired, or no session was ever established."
